@@ -1,0 +1,50 @@
+---
+title: "Projects"
+description: "Statistics and machine learning projects by Tristan Kennedy."
+---
+
+Each project states how it was evaluated and what its results do not show.
+
+::: {.project-card}
+### Bayesian Healthcare No-Shows
+Hierarchical logistic regression of healthcare appointment attendance. Neighborhood random intercepts partially pool local effects, and patient and scheduling variables enter as fixed effects. Longer waits are associated with lower attendance odds. The negative SMS-reminder coefficient is reported as confounded by scheduling, not as a causal effect. Posterior summaries and figures rebuild from 7,500 saved draws without patient data.
+
+[R]{.tag} [JAGS]{.tag} [Hierarchical models]{.tag} [Public health]{.tag}
+
+::: {.links}
+[Code and results](https://github.com/tristantoo/bayesian-healthcare-no-shows)
+:::
+:::
+
+::: {.project-card}
+### TF2 Player-Count Forecasting
+Monthly Team Fortress 2 player counts from July 2012 to September 2025, modeled with ARIMA/SARIMA, a piecewise pandemic-period term, and calendar-event regressors. On the October 2023 to September 2025 window, the refined event-regressor model had RMSE 14,505 against 26,950 for the automatic SARIMA baseline. That window also guided model selection, so it is not an untouched test set.
+
+[R]{.tag} [Time series]{.tag} [Forecasting]{.tag}
+
+::: {.links}
+[Code and report](https://github.com/tristantoo/tf2-player-count-forecasting)
+:::
+:::
+
+::: {.project-card}
+### EvidenceOps: Business Sentinel
+A Python pipeline that validates and reconciles CRM, billing, and operations exports, then writes management and exception reports with SHA-256 provenance. Malformed schemas are rejected before any report is written, and repeat runs produce byte-identical outputs in the checked environment. Tested against a locked benchmark of constructed defects.
+
+[Python]{.tag} [Data validation]{.tag} [Reproducibility]{.tag}
+
+::: {.links}
+[Code](https://github.com/tristantoo/evidenceops-demo)
+:::
+:::
+
+::: {.project-card}
+### Draft Expert (in development)
+A real-time draft recommendation system for League of Legends. A nightly pipeline ingests pro and collegiate games, runs evaluations before each build, and turns off any model term whose effect no longer clears its confidence interval. The bundle serves to a live client during champion select. Built for VCU's collegiate team.
+
+[Python]{.tag} [ML systems]{.tag} [Esports]{.tag}
+
+::: {.links}
+[Write-up coming]{.muted}
+:::
+:::

@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap";
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$font-size-root: 17px;
+
+$body-bg: #121417;
+$body-color: #e4e3df;
+$primary: #7fb3d9;
+$link-color: #7fb3d9;
+$navbar-bg: #121417;
+$navbar-fg: #e4e3df;
+$navbar-hl: #7fb3d9;
+$footer-bg: #121417;
+$border-color: #2a2e35;
+
+/*-- scss:rules --*/
+:root {
+  --tk-muted: #a3a7b0;
+  --tk-card: #191c20;
+  --tk-rule: #2a2e35;
+  --tk-tag-bg: #1d2a35;
+  --tk-tag-fg: #9cc6e4;
+}

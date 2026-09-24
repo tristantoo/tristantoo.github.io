@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+
+website:
+  title: "Tristan Kennedy"
+  site-url: https://tristkenn.com
+  description: "Statistics PhD student at Virginia Commonwealth University."
+  repo-url: https://github.com/tristantoo/tristantoo.github.io
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/tristantoo
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:tristan@tristkenn.com
+        aria-label: Email
+  page-footer:
+    center: "© 2026 Tristan Kennedy · Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/light.scss]
+      dark: [cosmo, styles/dark.scss]
+    css: styles/site.css
+    respect-user-color-scheme: true
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true

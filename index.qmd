@@ -1,0 +1,69 @@
+---
+title: "Tristan Kennedy"
+subtitle: "PhD student, Systems Modeling and Analysis (statistics) · Virginia Commonwealth University"
+pagetitle: "Tristan Kennedy"
+description: "PhD student in Systems Modeling and Analysis (statistics) at Virginia Commonwealth University."
+---
+
+```{=html}
+<div class="hero">
+  <div class="hero-links">
+    <a href="projects.html">Projects</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="https://github.com/tristantoo">GitHub</a><a href="mailto:tristan@tristkenn.com">Email</a>
+  </div>
+</div>
+```
+
+## About
+
+I am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.
+
+I care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results.
+
+## Research interests
+
+- **Semiparametric and causal inference with time structure:** double machine learning, cross-fitting, and identification when data arrive over time.
+- **Uncertainty quantification that survives shift:** conformal prediction and anytime-valid, sequential inference.
+- **Bayesian and hierarchical modeling:** partial pooling, model diagnostics, and robustness.
+- **Why learned advantages decay in adaptive competition:** drift, crowding, and adaptation in settings like game metas and markets.
+
+Applications I have worked on include public health, time-series forecasting, data validation, and competitive esports.
+
+## Now
+
+- Fall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.
+- Graduate teaching assistant for MATH 131.
+- Captain of VCU.GOLD, VCU's collegiate League of Legends team, and builder of its draft and scouting tools.
+
+## Selected projects
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Bayesian Healthcare No-Shows
+Hierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.
+
+[R]{.tag} [JAGS]{.tag} [Bayesian]{.tag}
+
+::: {.links}
+[Code](https://github.com/tristantoo/bayesian-healthcare-no-shows)
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### TF2 Player-Count Forecasting
+ARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.
+
+[R]{.tag} [Time series]{.tag}
+
+::: {.links}
+[Code](https://github.com/tristantoo/tf2-player-count-forecasting)
+:::
+:::
+:::
+
+:::
+
+[All projects →](projects.qmd)

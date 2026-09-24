@@ -1,0 +1,46 @@
+---
+title: "CV"
+description: "Curriculum vitae of Tristan Kennedy."
+---
+
+A PDF version is available on request by [email](mailto:tristan@tristkenn.com).
+
+## Education
+
+::: {.entry}
+::: {.entry-head}
+[Ph.D., Systems Modeling and Analysis (statistics), M.S. en route]{.entry-title} [In progress]{.entry-date}
+:::
+Virginia Commonwealth University, Richmond, VA.
+:::
+
+::: {.entry}
+::: {.entry-head}
+[B.S., Mathematics, Statistics concentration]{.entry-title} [May 2026]{.entry-date}
+:::
+Virginia Commonwealth University, Richmond, VA. Graduate coursework in applied linear regression and applied Bayesian statistics.
+:::
+
+## Teaching
+
+See [Teaching](teaching.qmd).
+
+## Selected projects
+
+See [Projects](projects.qmd).
+
+## Presentations
+
+- *Nonparametric Analysis of Spotify Audio Features.* Course presentation, STAT 423: Nonparametric Statistics, VCU, Fall 2025.
+- With G. Chandler and D. Selb. *Analyzing the Impact of the Implementation of MELD 3.0.* Group presentation, SSOR 480: Consulting Using Advanced Analytics, VCU, Fall 2025.
+- With D. Wall and R. Saakian. *Analysis of Diminishing Returns on Ad Spending.* Group presentation, SSOR 480, VCU, Fall 2025.
+
+## Skills
+
+**Languages:** R, Python, SAS, SQL, C++.
+**Methods:** regression and diagnostics, Bayesian and hierarchical models, time series, nonparametric inference, experimental design, predictive modeling and evaluation.
+**Tools:** Quarto, JAGS, PyMC, scikit-learn, Git.
+
+## Memberships
+
+Society for Industrial and Applied Mathematics (SIAM), 2026 to present.
