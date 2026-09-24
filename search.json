@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Graduate Teaching Assistant, MATH 131 Fall 2026 to present\n\nVirginia Commonwealth University.\n\n\n\nUndergraduate Teaching Assistant, MATH 139: College Algebra with Applications Spring 2026\n\nSupported a section of about 30 students during class and weekly office hours, and reported recurring points of confusion to the instructor so review could target them.\n\n\n\nClassroom Assistant and Peer Mentor, First-Generation Student Support Aug 2025 to present\n\nLed peer study sessions and small-group problem solving for first-generation mathematics and physics majors, and supported data collection for a First-Generation Student Success Grant."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Tristan Kennedy",
-    "section": "",
-    "text": "ProjectsTeachingCVGitHubEmail"
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Tristan Kennedy",
-    "section": "About",
-    "text": "About\nI am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.\nI care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results."
-  },
-  {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Tristan Kennedy",
-    "section": "Research interests",
-    "text": "Research interests\n\nSemiparametric and causal inference with time structure: double machine learning, cross-fitting, and identification when data arrive over time.\nUncertainty quantification that survives shift: conformal prediction and anytime-valid, sequential inference.\nBayesian and hierarchical modeling: partial pooling, model diagnostics, and robustness.\nWhy learned advantages decay in adaptive competition: drift, crowding, and adaptation in settings like game metas and markets.\n\nApplications I have worked on include public health, time-series forecasting, data validation, and competitive esports."
-  },
-  {
-    "objectID": "index.html#now",
-    "href": "index.html#now",
-    "title": "Tristan Kennedy",
-    "section": "Now",
-    "text": "Now\n\nFall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.\nGraduate teaching assistant for MATH 131.\nCaptain of VCU.GOLD, VCU’s collegiate League of Legends team, and builder of its draft and scouting tools."
-  },
-  {
-    "objectID": "index.html#selected-projects",
-    "href": "index.html#selected-projects",
-    "title": "Tristan Kennedy",
-    "section": "Selected projects",
-    "text": "Selected projects\n\n\n\nBayesian Healthcare No-Shows\nHierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.\nR JAGS Bayesian\n\nCode\n\n\n\n\n\nTF2 Player-Count Forecasting\nARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.\nR Time series\n\nCode\n\n\n\n\nAll projects →"
-  },
-  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "CV",
@@ -89,6 +47,48 @@
     "title": "CV",
     "section": "Memberships",
     "text": "Memberships\nSociety for Industrial and Applied Mathematics (SIAM), 2026 to present."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Graduate Teaching Assistant, MATH 131 Fall 2026 to present\n\nVirginia Commonwealth University.\n\n\n\nUndergraduate Teaching Assistant, MATH 139: College Algebra with Applications Spring 2026\n\nSupported a section of about 30 students during class and weekly office hours, and reported recurring points of confusion to the instructor so review could target them.\n\n\n\nClassroom Assistant and Peer Mentor, First-Generation Student Support Aug 2025 to present\n\nLed peer study sessions and small-group problem solving for first-generation mathematics and physics majors, and supported data collection for a First-Generation Student Success Grant."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tristan Kennedy",
+    "section": "",
+    "text": "ProjectsTeachingCVGitHubEmail"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Tristan Kennedy",
+    "section": "About",
+    "text": "About\nI am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.\nI care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Tristan Kennedy",
+    "section": "Research interests",
+    "text": "Research interests\n\nSemiparametric and causal inference with time structure: double machine learning, cross-fitting, and identification when data arrive over time.\nUncertainty quantification that survives shift: conformal prediction and anytime-valid, sequential inference.\nBayesian and hierarchical modeling: partial pooling, model diagnostics, and robustness.\nWhy learned advantages decay in adaptive competition: drift, crowding, and adaptation in settings like game metas and markets.\n\nApplications I have worked on include public health, time-series forecasting, data validation, and competitive esports."
+  },
+  {
+    "objectID": "index.html#now",
+    "href": "index.html#now",
+    "title": "Tristan Kennedy",
+    "section": "Now",
+    "text": "Now\n\nFall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.\nGraduate teaching assistant for MATH 131.\nCaptain of VCU.GOLD, VCU’s collegiate League of Legends team, and builder of its draft and scouting tools."
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Tristan Kennedy",
+    "section": "Selected projects",
+    "text": "Selected projects\n\n\n\nBayesian Healthcare No-Shows\nHierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.\nR JAGS Bayesian\n\nCode\n\n\n\n\n\nTF2 Player-Count Forecasting\nARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.\nR Time series\n\nCode\n\n\n\n\nAll projects →"
   },
   {
     "objectID": "projects.html",
