@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Graduate Teaching Assistant, MATH 131 Fall 2026 to present\n\nVirginia Commonwealth University.\n\n\n\nUndergraduate Teaching Assistant, MATH 139: College Algebra with Applications Spring 2026\n\nSupported a section of about 30 students during class and weekly office hours, and reported recurring points of confusion to the instructor so review could target them.\n\n\n\nClassroom Assistant and Peer Mentor, First-Generation Student Support Aug 2025 to present\n\nLed peer study sessions and small-group problem solving for first-generation mathematics and physics majors, and supported data collection for a First-Generation Student Success Grant."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tristan Kennedy",
+    "section": "",
+    "text": "ProjectsTeachingCVGitHubEmail"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Tristan Kennedy",
+    "section": "About",
+    "text": "About\nI am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.\nI care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Tristan Kennedy",
+    "section": "Research interests",
+    "text": "Research interests\n\nSemiparametric and causal inference with time structure: double machine learning, cross-fitting, and identification when data arrive over time.\nUncertainty quantification that survives shift: conformal prediction and anytime-valid, sequential inference.\nBayesian and hierarchical modeling: partial pooling, model diagnostics, and robustness.\nWhy learned advantages decay in adaptive competition: drift, crowding, and adaptation in settings like game metas and markets.\n\nApplications I have worked on include public health, time-series forecasting, data validation, and competitive esports."
+  },
+  {
+    "objectID": "index.html#now",
+    "href": "index.html#now",
+    "title": "Tristan Kennedy",
+    "section": "Now",
+    "text": "Now\n\nFall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.\nGraduate teaching assistant for MATH 131.\nCaptain of VCU.GOLD, VCU’s collegiate League of Legends team, and builder of its draft and scouting tools."
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Tristan Kennedy",
+    "section": "Selected projects",
+    "text": "Selected projects\n\n\n\nBayesian Healthcare No-Shows\nHierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.\nR JAGS Bayesian\n\nCode\n\n\n\n\n\nTF2 Player-Count Forecasting\nARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.\nR Time series\n\nCode\n\n\n\n\nAll projects →"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "A PDF version is available on request by email."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV",
+    "section": "Education",
+    "text": "Education\n\n\nPh.D., Systems Modeling and Analysis (statistics), M.S. en route In progress\n\nVirginia Commonwealth University, Richmond, VA.\n\n\n\nB.S., Mathematics, Statistics concentration May 2026\n\nVirginia Commonwealth University, Richmond, VA. Graduate coursework in applied linear regression and applied Bayesian statistics."
+  },
+  {
+    "objectID": "cv.html#teaching",
+    "href": "cv.html#teaching",
+    "title": "CV",
+    "section": "Teaching",
+    "text": "Teaching\nSee Teaching."
+  },
+  {
+    "objectID": "cv.html#selected-projects",
+    "href": "cv.html#selected-projects",
+    "title": "CV",
+    "section": "Selected projects",
+    "text": "Selected projects\nSee Projects."
+  },
+  {
+    "objectID": "cv.html#presentations",
+    "href": "cv.html#presentations",
+    "title": "CV",
+    "section": "Presentations",
+    "text": "Presentations\n\nNonparametric Analysis of Spotify Audio Features. Course presentation, STAT 423: Nonparametric Statistics, VCU, Fall 2025.\nWith G. Chandler and D. Selb. Analyzing the Impact of the Implementation of MELD 3.0. Group presentation, SSOR 480: Consulting Using Advanced Analytics, VCU, Fall 2025.\nWith D. Wall and R. Saakian. Analysis of Diminishing Returns on Ad Spending. Group presentation, SSOR 480, VCU, Fall 2025."
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "CV",
+    "section": "Skills",
+    "text": "Skills\nLanguages: R, Python, SAS, SQL, C++. Methods: regression and diagnostics, Bayesian and hierarchical models, time series, nonparametric inference, experimental design, predictive modeling and evaluation. Tools: Quarto, JAGS, PyMC, scikit-learn, Git."
+  },
+  {
+    "objectID": "cv.html#memberships",
+    "href": "cv.html#memberships",
+    "title": "CV",
+    "section": "Memberships",
+    "text": "Memberships\nSociety for Industrial and Applied Mathematics (SIAM), 2026 to present."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Each project states how it was evaluated and what its results do not show.\n\nBayesian Healthcare No-Shows\nHierarchical logistic regression of healthcare appointment attendance. Neighborhood random intercepts partially pool local effects, and patient and scheduling variables enter as fixed effects. Longer waits are associated with lower attendance odds. The negative SMS-reminder coefficient is reported as confounded by scheduling, not as a causal effect. Posterior summaries and figures rebuild from 7,500 saved draws without patient data.\nR JAGS Hierarchical models Public health\n\nCode and results\n\n\n\nTF2 Player-Count Forecasting\nMonthly Team Fortress 2 player counts from July 2012 to September 2025, modeled with ARIMA/SARIMA, a piecewise pandemic-period term, and calendar-event regressors. On the October 2023 to September 2025 window, the refined event-regressor model had RMSE 14,505 against 26,950 for the automatic SARIMA baseline. That window also guided model selection, so it is not an untouched test set.\nR Time series Forecasting\n\nCode and report\n\n\n\nEvidenceOps: Business Sentinel\nA Python pipeline that validates and reconciles CRM, billing, and operations exports, then writes management and exception reports with SHA-256 provenance. Malformed schemas are rejected before any report is written, and repeat runs produce byte-identical outputs in the checked environment. Tested against a locked benchmark of constructed defects.\nPython Data validation Reproducibility\n\nCode\n\n\n\nDraft Expert (in development)\nA real-time draft recommendation system for League of Legends. A nightly pipeline ingests pro and collegiate games, runs evaluations before each build, and turns off any model term whose effect no longer clears its confidence interval. The bundle serves to a live client during champion select. Built for VCU’s collegiate team.\nPython ML systems Esports\n\nWrite-up coming"
+  }
+]
