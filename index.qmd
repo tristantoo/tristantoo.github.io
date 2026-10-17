@@ -1,8 +1,8 @@
 ---
 title: "Tristan Kennedy"
-subtitle: "PhD student, Systems Modeling and Analysis (statistics) · Virginia Commonwealth University"
+subtitle: "PhD student in Systems Modeling and Analysis (Statistics and Data Science) · Virginia Commonwealth University"
 pagetitle: "Tristan Kennedy"
-description: "PhD student in Systems Modeling and Analysis (statistics) at Virginia Commonwealth University."
+description: "Statistical modeling for insurance pricing, healthcare claims, and forecasting, by Tristan Kennedy."
 ---
 
 ```{=html}
@@ -15,9 +15,13 @@ description: "PhD student in Systems Modeling and Analysis (statistics) at Virgi
 
 ## About
 
-I am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.
+I build statistical models that have to hold up when someone acts on them: insurance pricing, healthcare claims, and forecasting. My work tests models on later data than they were trained on, checks that predicted probabilities match what happens, and reports when a model fails a check.
 
-I care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results.
+I am the first in my family to go to college. I finished a B.S. in Mathematical Sciences with a statistics concentration at VCU in May 2026 and started graduate study in Systems Modeling and Analysis that August.
+
+As a graduate teaching assistant I plan and teach full class sessions of Contemporary Mathematics for 85 students, write and grade their assessments, and keep the gradebook. Before that I spent nearly six years as a shift lead at Best Buy, leading about 30 people on a shift. Both jobs taught me the same thing: an answer only counts if the person in front of you can use it.
+
+My statistics toolkit is GLMs (Poisson, binomial, Gamma, negative binomial), time series, Bayesian hierarchical models, the bootstrap, and calibration. I work in R, Python, SQL Server, Power BI, and SAS.
 
 ## Research interests
 
@@ -28,15 +32,48 @@ I care about evaluation that holds up: validation that respects time order, cali
 
 Applications I have worked on include public health, time-series forecasting, data validation, and competitive esports.
 
-## Now
-
-- Fall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.
-- Graduate teaching assistant for MATH 131.
-- Captain of VCU.GOLD, VCU's collegiate League of Legends team, and builder of its draft and scouting tools.
-
 ## Selected projects
 
 ::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Hospital Readmission Risk on Medicare Claims
+SQL Server data mart and 30-day readmission measure on CMS synthetic claims, with a GLM tested on a later year and checked for calibration.
+
+[SQL Server]{.tag} [Python]{.tag} [Healthcare claims]{.tag}
+
+::: {.links}
+[Code public soon]{.muted}
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Motor Insurance Ratemaking
+Poisson frequency GLMs on 668,874 policies, a gradient boosting challenger, and a mock rate filing with capped relativities.
+
+[R]{.tag} [GLMs]{.tag} [Insurance pricing]{.tag}
+
+::: {.links}
+[Code public soon]{.muted}
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Credit Card Charge-Off Forecasting
+Rolling-origin backtest of Federal Reserve charge-off rates with significance tests and conformal intervals.
+
+[Python]{.tag} [SQL Server]{.tag} [Forecasting]{.tag}
+
+::: {.links}
+[Code public soon]{.muted}
+:::
+:::
+:::
 
 ::: {.g-col-12 .g-col-md-6}
 ::: {.project-card}
@@ -47,19 +84,6 @@ Hierarchical logistic regression of appointment attendance with neighborhood par
 
 ::: {.links}
 [Code](https://github.com/tristantoo/bayesian-healthcare-no-shows)
-:::
-:::
-:::
-
-::: {.g-col-12 .g-col-md-6}
-::: {.project-card}
-### TF2 Player-Count Forecasting
-ARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.
-
-[R]{.tag} [Time series]{.tag}
-
-::: {.links}
-[Code](https://github.com/tristantoo/tf2-player-count-forecasting)
 :::
 :::
 :::
