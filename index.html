@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="PhD student in Systems Modeling and Analysis (statistics) at Virginia Commonwealth University.">
+<meta name="description" content="Statistical modeling for insurance pricing, healthcare claims, and forecasting, by Tristan Kennedy.">
 
 <title>Tristan Kennedy</title>
 <style>
@@ -320,12 +320,12 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Tristan Kennedy</h1>
-<p class="subtitle lead">PhD student, Systems Modeling and Analysis (statistics) · Virginia Commonwealth University</p>
+<p class="subtitle lead">PhD student in Systems Modeling and Analysis (Statistics and Data Science) · Virginia Commonwealth University</p>
 </div>
 
 <div>
   <div class="description">
-    PhD student in Systems Modeling and Analysis (statistics) at Virginia Commonwealth University.
+    Statistical modeling for insurance pricing, healthcare claims, and forecasting, by Tristan Kennedy.
   </div>
 </div>
 
@@ -349,8 +349,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
-<p>I am a first-year PhD student in Systems Modeling and Analysis at Virginia Commonwealth University, earning an M.S. along the way. I work in statistics and machine learning. I build complete ML systems on my own, from data ingestion through modeling, evaluation, and serving, and I teach as a graduate teaching assistant.</p>
-<p>I care about evaluation that holds up: validation that respects time order, calibration alongside discrimination, audits for leakage, and reporting negative results as results.</p>
+<p>I build statistical models that have to hold up when someone acts on them: insurance pricing, healthcare claims, and forecasting. My work tests models on later data than they were trained on, checks that predicted probabilities match what happens, and reports when a model fails a check.</p>
+<p>I am the first in my family to go to college. I finished a B.S. in Mathematical Sciences with a statistics concentration at VCU in May 2026 and started graduate study in Systems Modeling and Analysis that August.</p>
+<p>As a graduate teaching assistant I plan and teach full class sessions of Contemporary Mathematics for 85 students, write and grade their assessments, and keep the gradebook. Before that I spent nearly six years as a shift lead at Best Buy, leading about 30 people on a shift. Both jobs taught me the same thing: an answer only counts if the person in front of you can use it.</p>
+<p>My statistics toolkit is GLMs (Poisson, binomial, Gamma, negative binomial), time series, Bayesian hierarchical models, the bootstrap, and calibration. I work in R, Python, SQL Server, Power BI, and SAS.</p>
 </section>
 <section id="research-interests" class="level2">
 <h2 class="anchored" data-anchor-id="research-interests">Research interests</h2>
@@ -362,17 +364,39 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Applications I have worked on include public health, time-series forecasting, data validation, and competitive esports.</p>
 </section>
-<section id="now" class="level2">
-<h2 class="anchored" data-anchor-id="now">Now</h2>
-<ul>
-<li>Fall 2026 coursework: mathematical statistics, dynamical systems, and graph theory.</li>
-<li>Graduate teaching assistant for MATH 131.</li>
-<li>Captain of VCU.GOLD, VCU’s collegiate League of Legends team, and builder of its draft and scouting tools.</li>
-</ul>
-</section>
 <section id="selected-projects" class="level2">
 <h2 class="anchored" data-anchor-id="selected-projects">Selected projects</h2>
 <div class="grid">
+<div class="g-col-12 g-col-md-6">
+<section id="hospital-readmission-risk-on-medicare-claims" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="hospital-readmission-risk-on-medicare-claims">Hospital Readmission Risk on Medicare Claims</h3>
+<p>SQL Server data mart and 30-day readmission measure on CMS synthetic claims, with a GLM tested on a later year and checked for calibration.</p>
+<p><span class="tag">SQL Server</span> <span class="tag">Python</span> <span class="tag">Healthcare claims</span></p>
+<div class="links">
+<p><span class="muted">Code public soon</span></p>
+</div>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="motor-insurance-ratemaking" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="motor-insurance-ratemaking">Motor Insurance Ratemaking</h3>
+<p>Poisson frequency GLMs on 668,874 policies, a gradient boosting challenger, and a mock rate filing with capped relativities.</p>
+<p><span class="tag">R</span> <span class="tag">GLMs</span> <span class="tag">Insurance pricing</span></p>
+<div class="links">
+<p><span class="muted">Code public soon</span></p>
+</div>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="credit-card-charge-off-forecasting" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="credit-card-charge-off-forecasting">Credit Card Charge-Off Forecasting</h3>
+<p>Rolling-origin backtest of Federal Reserve charge-off rates with significance tests and conformal intervals.</p>
+<p><span class="tag">Python</span> <span class="tag">SQL Server</span> <span class="tag">Forecasting</span></p>
+<div class="links">
+<p><span class="muted">Code public soon</span></p>
+</div>
+</section>
+</div>
 <div class="g-col-12 g-col-md-6">
 <section id="bayesian-healthcare-no-shows" class="level3 project-card">
 <h3 class="anchored" data-anchor-id="bayesian-healthcare-no-shows">Bayesian Healthcare No-Shows</h3>
@@ -380,16 +404,6 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="tag">R</span> <span class="tag">JAGS</span> <span class="tag">Bayesian</span></p>
 <div class="links">
 <p><a href="https://github.com/tristantoo/bayesian-healthcare-no-shows">Code</a></p>
-</div>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="tf2-player-count-forecasting" class="level3 project-card">
-<h3 class="anchored" data-anchor-id="tf2-player-count-forecasting">TF2 Player-Count Forecasting</h3>
-<p>ARIMA models with event regressors for 159 months of player counts, compared against an automatic SARIMA baseline on a held-out window.</p>
-<p><span class="tag">R</span> <span class="tag">Time series</span></p>
-<div class="links">
-<p><a href="https://github.com/tristantoo/tf2-player-count-forecasting">Code</a></p>
 </div>
 </section>
 </div>
