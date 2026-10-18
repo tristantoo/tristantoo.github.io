@@ -12,7 +12,7 @@ Since April 2026, CMS has asked hospitals to publish the median, 10th and 90th p
 [Python]{.tag} [Survey sampling]{.tag} [Data engineering]{.tag} [Healthcare pricing]{.tag}
 
 ::: {.links}
-[Scorecard and hospital lookup](hospital-prices/)
+[Scorecard and hospital lookup](hospital-prices/) · [Code and data](https://github.com/tristantoo/hospital-price-audit)
 :::
 :::
 
