@@ -342,6 +342,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Each project states how it was evaluated and what its results do not show.</p>
+<section id="hospital-price-file-audit-2026-paid-amount-rule" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="hospital-price-file-audit-2026-paid-amount-rule">Hospital Price File Audit (2026 paid-amount rule)</h3>
+<p>Since April 2026, CMS has asked hospitals to publish the median, 10th and 90th percentile of what insurers actually paid. I drew a stratified random sample of 300 US hospitals before looking up any websites, so hospitals with missing or blocked files stay in the denominator, and audited every non-federal Virginia hospital. A pipeline fetches each hospital’s index and price file (CSV, JSON or zip, up to 300 MB each) and parses about 53 million payer rows. 61.7% of hospitals (95% CI 56.3% to 66.8%) met every file requirement I could check. Only 19.8% (15.3% to 25.1%) of readable files report paid amounts on more than a tenth of their rows, and most of the rest enter a claim count of 0, which the rule allows when there are no claims. Shares are design-weighted with Wilson intervals on the effective sample size. A second fresh fetch 8 hours later reproduced all 2,703 national check results, and a failure is shown only if it repeats. Peterson-KFF reported the empty fields first; this audit adds a hospital-level probability sample with non-response kept in the denominator.</p>
+<p><span class="tag">Python</span> <span class="tag">Survey sampling</span> <span class="tag">Data engineering</span> <span class="tag">Healthcare pricing</span></p>
+<div class="links">
+<p><a href="hospital-prices/">Scorecard and hospital lookup</a></p>
+</div>
+</section>
 <section id="hospital-readmission-risk-on-medicare-claims-synthetic" class="level3 project-card">
 <h3 class="anchored" data-anchor-id="hospital-readmission-risk-on-medicare-claims-synthetic">Hospital Readmission Risk on Medicare Claims (synthetic)</h3>
 <p>A SQL Server data mart built from 66,705 inpatient claims for 37,780 beneficiaries in CMS DE-SynPUF synthetic Medicare data. Window functions merge transfers into stays and compute a HEDIS-style 30-day all-cause readmission measure, and every count reconciles to an independent Python build. A logistic GLM trained on 2009 discharges and tested on 2010 beat a two-variable baseline (AUC 0.612 vs 0.552; paired bootstrap 95% interval for the gain 0.03 to 0.09). Gradient boosting added nothing (AUC difference 0.000, interval -0.019 to 0.016). The GLM predicted a 6.7% readmission rate where 3.9% occurred in 2010, so it needs recalibration before use. The data are synthetic, so the coefficients say nothing about real patients.</p>
