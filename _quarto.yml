@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - CNAME
+    - hospital-prices/**
 
 website:
   title: "Tristan Kennedy"
