@@ -4,6 +4,7 @@ project:
   resources:
     - CNAME
     - hospital-prices/**
+    - pfas-michigan/**
 
 website:
   title: "Tristan Kennedy"
