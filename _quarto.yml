@@ -1,8 +1,11 @@
 project:
   type: website
   output-dir: _site
+  post-render: scripts/post_render.py
   resources:
     - CNAME
+    - styles/tokens.css
+    - styles/base.css
     - hospital-prices/**
     - pfas-michigan/**
 
@@ -11,33 +14,14 @@ website:
   site-url: https://tristkenn.com
   description: "Statistics PhD student at Virginia Commonwealth University."
   repo-url: https://github.com/tristantoo/tristantoo.github.io
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: projects.qmd
-        text: Projects
-      - href: teaching.qmd
-        text: Teaching
-      - href: cv.qmd
-        text: CV
-    right:
-      - icon: github
-        href: https://github.com/tristantoo
-        aria-label: GitHub
-      - icon: envelope
-        href: mailto:tristan@tristkenn.com
-        aria-label: Email
-  page-footer:
-    center: "© 2026 Tristan Kennedy · Built with [Quarto](https://quarto.org)"
 
+# minimal: no Bootstrap. Nav and footer come from _includes; styles/site.css imports the Hallmark tokens and base.
 format:
   html:
-    theme:
-      light: [cosmo, styles/light.scss]
-      dark: [cosmo, styles/dark.scss]
+    minimal: true
+    template-partials:
+      - _includes/styles.html
     css: styles/site.css
-    respect-user-color-scheme: true
-    toc: false
-    smooth-scroll: true
-    link-external-newwindow: true
+    include-in-header: _includes/head.html
+    include-before-body: _includes/nav.html
+    include-after-body: _includes/footer.html

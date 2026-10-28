@@ -3,6 +3,11 @@ title: "Teaching"
 description: "Teaching and mentoring by Tristan Kennedy at Virginia Commonwealth University."
 ---
 
+```{=html}
+<section class="page-head"><div class="container"><h1>Teaching</h1></div></section>
+```
+
+::: {.container .entries}
 ::: {.entry}
 ::: {.entry-head}
 [Graduate Teaching Assistant, MATH 131]{.entry-title} [Fall 2026 to present]{.entry-date}
@@ -22,4 +27,5 @@ Supported a section of about 30 students during class and weekly office hours, a
 [Classroom Assistant and Peer Mentor, First-Generation Student Support]{.entry-title} [Aug 2025 to May 2026]{.entry-date}
 :::
 Led peer study sessions and small-group problem solving for first-generation mathematics and physics majors, and supported data collection for a First-Generation Student Success Grant.
+:::
 :::

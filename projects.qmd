@@ -3,39 +3,55 @@ title: "Projects"
 description: "Statistics and machine learning projects by Tristan Kennedy."
 ---
 
-Each project states how it was evaluated and what its results do not show.
+```{=html}
+<section class="page-head"><div class="container"><h1>Projects</h1><p class="lead">Each project states how it was evaluated and what its results do not show.</p></div></section>
+```
 
-::: {.project-card}
-### PFAS in Michigan Public Water Supplies, 2020–2025
+::: {.row}
+::: {.head}
+## PFAS in Michigan Public Water Supplies, 2020 to 2025
+:::
+
+::: {.body}
 Censored-data statistics on every PFAS result Michigan EGLE has published for public water supplies: 156,174 results at 5,434 sampling points in 2,795 systems. 95.5% of results are below the 2 ng/L reporting limit, so no statewide mean is reported.
 
 - **Compliance screening:** running annual averages put 76 sampling points in 52 systems over the federal 4 ppt PFOA/PFOS limit in at least one full year, against 22 points in 15 systems for Michigan's limits. How nondetects are counted changes at most 2 points.
-- **Trends:** Akritas–Theil–Sen tests with FDR control found 43 increasing and 32 decreasing series (sign test p = 0.25), so no statewide decline is claimed. Rising points stay on quarterly sampling and are more likely to be tested, which biases that count toward increases.
+- **Trends:** Akritas-Theil-Sen tests with FDR control found 43 increasing and 32 decreasing series (sign test p = 0.25), so no statewide decline is claimed. Rising points stay on quarterly sampling and are more likely to be tested, which biases that count toward increases.
 - **Detection monitoring:** intrawell prediction limits with verification resampling, and the double quantification rule, flag 63 statistically significant increases at 39 points.
-- **Pre-registration:** the plan was committed before any statistic was computed, and both falsification checks fired. In a simulation, RL/2 substitution matched or beat ROS, and Kaplan–Meier was never the best estimator.
+- **Pre-registration:** the plan was committed before any statistic was computed, and both falsification checks fired. In a simulation, RL/2 substitution matched or beat ROS, and Kaplan-Meier was never the best estimator.
 
 These are screening estimates, not compliance determinations.
 
 [R]{.tag} [Environmental statistics]{.tag} [Censored data]{.tag} [Trend analysis]{.tag} [Detection monitoring]{.tag}
 
 ::: {.links}
-[Report](pfas-michigan/) · [Code and data](https://github.com/tristantoo/mi-pfas-monitoring)
+[Report](pfas-michigan/) [Code and data](https://github.com/tristantoo/mi-pfas-monitoring)
+:::
 :::
 :::
 
-::: {.project-card}
-### Hospital Price File Audit (2026 paid-amount rule)
+::: {.row}
+::: {.head}
+## Hospital Price File Audit (2026 paid-amount rule)
+:::
+
+::: {.body}
 Since April 2026, CMS has asked hospitals to publish the median, 10th and 90th percentile of what insurers actually paid. I drew a stratified random sample of 300 US hospitals before looking up any websites, so hospitals with missing or blocked files stay in the denominator, and audited every non-federal Virginia hospital. A pipeline fetches each hospital's index and price file (CSV, JSON or zip, up to 300 MB each) and parses about 53 million payer rows. 61.7% of hospitals (95% CI 56.3% to 66.8%) met every file requirement I could check. Only 19.8% (15.3% to 25.1%) of readable files report paid amounts on more than a tenth of their rows, and most of the rest enter a claim count of 0, which the rule allows when there are no claims. Shares are design-weighted with Wilson intervals on the effective sample size. A second fresh fetch 8 hours later reproduced all 2,703 national check results, and a failure is shown only if it repeats. Peterson-KFF reported the empty fields first; this audit adds a hospital-level probability sample with non-response kept in the denominator.
 
 [Python]{.tag} [Survey sampling]{.tag} [Data engineering]{.tag} [Healthcare pricing]{.tag}
 
 ::: {.links}
-[Scorecard and hospital lookup](hospital-prices/) · [Code and data](https://github.com/tristantoo/hospital-price-audit)
+[Scorecard and hospital lookup](hospital-prices/) [Code and data](https://github.com/tristantoo/hospital-price-audit)
+:::
 :::
 :::
 
-::: {.project-card}
-### Hospital Readmission Risk on Medicare Claims (synthetic)
+::: {.row}
+::: {.head}
+## Hospital Readmission Risk on Medicare Claims (synthetic)
+:::
+
+::: {.body}
 A SQL Server data mart built from 66,705 inpatient claims for 37,780 beneficiaries in CMS DE-SynPUF synthetic Medicare data. Window functions merge transfers into stays and compute a HEDIS-style 30-day all-cause readmission measure, and every count reconciles to an independent Python build. A logistic GLM trained on 2009 discharges and tested on 2010 beat a two-variable baseline (AUC 0.612 vs 0.552; paired bootstrap 95% interval for the gain 0.03 to 0.09). Gradient boosting added nothing (AUC difference 0.000, interval -0.019 to 0.016). The GLM predicted a 6.7% readmission rate where 3.9% occurred in 2010, so it needs recalibration before use. The data are synthetic, so the coefficients say nothing about real patients.
 
 [SQL Server]{.tag} [Python]{.tag} [GLMs]{.tag} [Calibration]{.tag} [Healthcare claims]{.tag}
@@ -44,9 +60,14 @@ A SQL Server data mart built from 66,705 inpatient claims for 37,780 beneficiari
 [Code public soon]{.muted}
 :::
 :::
+:::
 
-::: {.project-card}
-### Motor Insurance Ratemaking and Mock Rate Filing
+::: {.row}
+::: {.head}
+## Motor Insurance Ratemaking and Mock Rate Filing
+:::
+
+::: {.body}
 Exposure-offset Poisson frequency GLMs on 668,874 French motor liability policies (freMTPL2). On a 133,775-policy holdout, the 8-variable plan cut Poisson deviance 5.09% vs exposure only (paired bootstrap 95% interval 4.56% to 5.60%) and 0.55% vs a 3-variable incumbent plan (0.35% to 0.73%). The data have no policy dates, so the holdout is random, not later in time. A gradient boosting challenger beat the GLM (deviance 1.68% lower, 1.38% to 2.00%), and the Gamma severity model did not beat a flat mean, so the plan uses flat severity. The mock filing covers credibility-weighted relativities with 15% caps, a +5.9% indication on labeled illustrative assumptions, lift and double lift charts, and premium dislocation.
 
 [R]{.tag} [GLMs]{.tag} [Insurance pricing]{.tag} [Credibility]{.tag}
@@ -55,9 +76,14 @@ Exposure-offset Poisson frequency GLMs on 668,874 French motor liability policie
 [Code public soon]{.muted}
 :::
 :::
+:::
 
-::: {.project-card}
-### Credit Card Charge-Off Forecasting
+::: {.row}
+::: {.head}
+## Credit Card Charge-Off Forecasting
+:::
+
+::: {.body}
 Federal Reserve charge-off and delinquency rates and unemployment (FRED, 166 quarters) loaded into SQL Server with reconciliation checks, then forecast 1 to 4 quarters ahead in a rolling-origin backtest with 82 refits from 2005 to 2025. A regression with ARIMA errors cut 4-quarter MASE 28% vs a no-change forecast (2.99 vs 4.14), but Diebold-Mariano tests were not significant (p 0.10 to 0.70), so no reliable gain is claimed. The no-change forecast's own 80% intervals covered only 69.5% of outcomes four quarters ahead; split-conformal intervals built from past out-of-sample errors covered 79% to 90% across all models and horizons.
 
 [Python]{.tag} [SQL Server]{.tag} [Forecasting]{.tag} [Conformal prediction]{.tag} [Credit risk]{.tag}
@@ -66,9 +92,14 @@ Federal Reserve charge-off and delinquency rates and unemployment (FRED, 166 qua
 [Code public soon]{.muted}
 :::
 :::
+:::
 
-::: {.project-card}
-### Bayesian Healthcare No-Shows
+::: {.row}
+::: {.head}
+## Bayesian Healthcare No-Shows
+:::
+
+::: {.body}
 Hierarchical logistic regression of healthcare appointment attendance. Neighborhood random intercepts partially pool local effects, and patient and scheduling variables enter as fixed effects. Longer waits are associated with lower attendance odds. The negative SMS-reminder coefficient is reported as confounded by scheduling, not as a causal effect. Posterior summaries and figures rebuild from 7,500 saved draws without patient data.
 
 [R]{.tag} [JAGS]{.tag} [Hierarchical models]{.tag} [Public health]{.tag}
@@ -77,9 +108,14 @@ Hierarchical logistic regression of healthcare appointment attendance. Neighborh
 [Code and results](https://github.com/tristantoo/bayesian-healthcare-no-shows)
 :::
 :::
+:::
 
-::: {.project-card}
-### TF2 Player-Count Forecasting
+::: {.row}
+::: {.head}
+## TF2 Player-Count Forecasting
+:::
+
+::: {.body}
 Monthly Team Fortress 2 player counts from July 2012 to September 2025, modeled with ARIMA/SARIMA, a piecewise pandemic-period term, and calendar-event regressors. On the October 2023 to September 2025 window, the refined event-regressor model had RMSE 14,505 against 26,950 for the automatic SARIMA baseline. That window also guided model selection, so it is not an untouched test set.
 
 [R]{.tag} [Time series]{.tag} [Forecasting]{.tag}
@@ -88,9 +124,14 @@ Monthly Team Fortress 2 player counts from July 2012 to September 2025, modeled 
 [Code and report](https://github.com/tristantoo/tf2-player-count-forecasting)
 :::
 :::
+:::
 
-::: {.project-card}
-### EvidenceOps: Business Sentinel
+::: {.row}
+::: {.head}
+## EvidenceOps: Business Sentinel
+:::
+
+::: {.body}
 A Python pipeline that validates and reconciles CRM, billing, and operations exports, then writes management and exception reports with SHA-256 provenance. Malformed schemas are rejected before any report is written, and repeat runs produce byte-identical outputs in the checked environment. Tested against a locked benchmark of constructed defects.
 
 [Python]{.tag} [Data validation]{.tag} [Reproducibility]{.tag}
@@ -99,9 +140,14 @@ A Python pipeline that validates and reconciles CRM, billing, and operations exp
 [Code](https://github.com/tristantoo/evidenceops-demo)
 :::
 :::
+:::
 
-::: {.project-card}
-### Draft Expert (in development)
+::: {.row}
+::: {.head}
+## Draft Expert (in development)
+:::
+
+::: {.body}
 A real-time draft recommendation system for League of Legends. A nightly pipeline ingests pro and collegiate games, runs evaluations before each build, and turns off any model term whose effect no longer clears its confidence interval. The bundle serves to a live client during champion select. Built for VCU's collegiate team.
 
 [Python]{.tag} [ML systems]{.tag} [Esports]{.tag}
@@ -110,3 +156,5 @@ A real-time draft recommendation system for League of Legends. A nightly pipelin
 [Write-up coming]{.muted}
 :::
 :::
+:::
+

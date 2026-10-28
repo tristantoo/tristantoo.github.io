@@ -1,20 +1,47 @@
 ---
 title: "Tristan Kennedy"
-subtitle: "PhD student in Systems Modeling and Analysis (Statistics and Data Science) · Virginia Commonwealth University"
-pagetitle: "Tristan Kennedy"
 description: "Statistical modeling for insurance pricing, healthcare claims, and forecasting, by Tristan Kennedy."
 ---
 
 ```{=html}
-<div class="hero">
-  <div class="hero-links">
-    <a href="projects.html">Projects</a><a href="teaching.html">Teaching</a><a href="cv.html">CV</a><a href="https://github.com/tristantoo">GitHub</a><a href="mailto:tristan@tristkenn.com">Email</a>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Tristan Kennedy</h1>
+      <p class="lead">PhD student in Systems Modeling and Analysis (Statistics and Data Science) at Virginia Commonwealth University.</p>
+      <p class="actions"><a class="btn btn--primary" href="mailto:tristan@tristkenn.com">Email</a><a class="btn" href="projects.html">Projects</a><a class="btn" href="cv.html">CV</a></p>
+    </div>
+    <figure class="sheet">
+      <div class="sheet-scroll" tabindex="0" role="region" aria-label="Held-out results, scrolls sideways on small screens">
+        <table>
+          <caption>Held-out results, by project</caption>
+          <thead>
+            <tr><th scope="col">Project and comparison</th><th scope="col" class="num">Result</th><th scope="col" class="num">Uncertainty</th><th scope="col">Read</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Readmissions<span>GLM vs baseline, AUC on 2010</span></th><td class="num">0.612 vs 0.552</td><td class="num">gain 0.03 to 0.09</td><td>Holds</td></tr>
+            <tr><th scope="row">Readmissions<span>Gradient boosting vs GLM, AUC</span></th><td class="num">0.000</td><td class="num">&minus;0.019 to 0.016</td><td>Added nothing</td></tr>
+            <tr><th scope="row">Motor ratemaking<span>8 variables vs exposure only, deviance</span></th><td class="num">5.09% lower</td><td class="num">4.56 to 5.60</td><td>Holds</td></tr>
+            <tr class="mark"><th scope="row">Charge-offs<span>ARIMA errors vs no change, 4-quarter MASE</span></th><td class="num">2.99 vs 4.14</td><td class="num">DM p 0.10 to 0.70</td><td>No gain claimed</td></tr>
+            <tr><th scope="row">Charge-offs<span>Split-conformal 80% intervals, coverage</span></th><td class="num">79% to 90%</td><td class="num">naive 69.5%</td><td>Calibrated</td></tr>
+            <tr><th scope="row">Hospital prices<span>Hospitals meeting every file rule</span></th><td class="num">61.7%</td><td class="num">56.3 to 66.8</td><td>Design-weighted</td></tr>
+            <tr><th scope="row">PFAS, Michigan<span>Increasing vs decreasing trends</span></th><td class="num">43 vs 32</td><td class="num">sign test p 0.25</td><td>No decline claimed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figcaption>From the project write-ups. Unlabelled ranges are 95% intervals.</figcaption>
+    </figure>
   </div>
-</div>
+</section>
 ```
 
+::: {.band}
+::: {.container .split}
+::: {.head}
 ## About
+:::
 
+::: {.body}
 I build statistical models that have to hold up when someone acts on them: insurance pricing, healthcare claims, and forecasting. My work tests models on later data than they were trained on, checks that predicted probabilities match what happens, and reports when a model fails a check.
 
 I am the first in my family to go to college. I finished a B.S. in Mathematical Sciences with a statistics concentration at VCU in May 2026 and started graduate study in Systems Modeling and Analysis that August.
@@ -22,72 +49,110 @@ I am the first in my family to go to college. I finished a B.S. in Mathematical 
 As a graduate teaching assistant I plan and teach full class sessions of Contemporary Mathematics for 85 students, write and grade their assessments, and keep the gradebook. Before that I spent nearly six years as a shift lead at Best Buy, leading about 30 people on a shift. Both jobs taught me the same thing: an answer only counts if the person in front of you can use it.
 
 My statistics toolkit is GLMs (Poisson, binomial, Gamma, negative binomial), time series, Bayesian hierarchical models, the bootstrap, and calibration. I work in R, Python, SQL Server, Power BI, and SAS.
+:::
+:::
+:::
 
+::: {.band .band--gap-l}
+::: {.container .interests}
+::: {.head}
 ## Research interests
+:::
 
-- **Semiparametric and causal inference with time structure:** double machine learning, cross-fitting, and identification when data arrive over time.
-- **Uncertainty quantification that survives shift:** conformal prediction and anytime-valid, sequential inference.
-- **Bayesian and hierarchical modeling:** partial pooling, model diagnostics, and robustness.
-- **Why learned advantages decay in adaptive competition:** drift, crowding, and adaptation in settings like game metas and markets.
+::: {.item}
+### Semiparametric and causal inference with time structure
+Double machine learning, cross-fitting, and identification when data arrive over time.
+:::
+
+::: {.item}
+### Uncertainty quantification that survives shift
+Conformal prediction and anytime-valid, sequential inference.
+:::
+
+::: {.item}
+### Bayesian and hierarchical modeling
+Partial pooling, model diagnostics, and robustness.
+:::
+
+::: {.item}
+### Why learned advantages decay in adaptive competition
+Drift, crowding, and adaptation in settings like game metas and markets.
+:::
 
 Applications I have worked on include public health, time-series forecasting, data validation, and competitive esports.
+:::
+:::
 
+::: {.band .band--well}
+::: {.container .index}
+::: {.head}
 ## Selected projects
+:::
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6}
-::: {.project-card}
+::: {.entry-row}
+::: {.head}
 ### Hospital Readmission Risk on Medicare Claims
-SQL Server data mart and 30-day readmission measure on CMS synthetic claims, with a GLM tested on a later year and checked for calibration.
 
 [SQL Server]{.tag} [Python]{.tag} [Healthcare claims]{.tag}
+:::
+
+SQL Server data mart and 30-day readmission measure on CMS synthetic claims, with a GLM tested on a later year and checked for calibration.
 
 ::: {.links}
 [Code public soon]{.muted}
 :::
 :::
-:::
 
-::: {.g-col-12 .g-col-md-6}
-::: {.project-card}
+::: {.entry-row}
+::: {.head}
 ### Motor Insurance Ratemaking
-Poisson frequency GLMs on 668,874 policies, a gradient boosting challenger, and a mock rate filing with capped relativities.
 
 [R]{.tag} [GLMs]{.tag} [Insurance pricing]{.tag}
+:::
+
+Poisson frequency GLMs on 668,874 policies, a gradient boosting challenger, and a mock rate filing with capped relativities.
 
 ::: {.links}
 [Code public soon]{.muted}
 :::
 :::
-:::
 
-::: {.g-col-12 .g-col-md-6}
-::: {.project-card}
+::: {.entry-row}
+::: {.head}
 ### Credit Card Charge-Off Forecasting
-Rolling-origin backtest of Federal Reserve charge-off rates with significance tests and conformal intervals.
 
 [Python]{.tag} [SQL Server]{.tag} [Forecasting]{.tag}
+:::
+
+Rolling-origin backtest of Federal Reserve charge-off rates with significance tests and conformal intervals.
 
 ::: {.links}
 [Code public soon]{.muted}
 :::
 :::
-:::
 
-::: {.g-col-12 .g-col-md-6}
-::: {.project-card}
+::: {.entry-row}
+::: {.head}
 ### Bayesian Healthcare No-Shows
-Hierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.
 
 [R]{.tag} [JAGS]{.tag} [Bayesian]{.tag}
+:::
+
+Hierarchical logistic regression of appointment attendance with neighborhood partial pooling, fit in JAGS. Posterior summaries rebuild from saved draws.
 
 ::: {.links}
 [Code](https://github.com/tristantoo/bayesian-healthcare-no-shows)
 :::
 :::
+
+[All projects](projects.qmd){.btn}
+:::
 :::
 
-:::
+::: {.band .band--ink}
+::: {.container .contact}
+[tristan@tristkenn.com](mailto:tristan@tristkenn.com){.contact-mail}
 
-[All projects →](projects.qmd)
+[GitHub](https://github.com/tristantoo)
+:::
+:::

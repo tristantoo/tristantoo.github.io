@@ -3,10 +3,16 @@ title: "CV"
 description: "Curriculum vitae of Tristan Kennedy."
 ---
 
-A PDF version is available on request by [email](mailto:tristan@tristkenn.com).
+```{=html}
+<section class="page-head"><div class="container"><h1>CV</h1><p class="lead">A PDF version is available on request by <a href="mailto:tristan@tristkenn.com">email</a>.</p></div></section>
+```
 
+::: {.row}
+::: {.head}
 ## Education
+:::
 
+::: {.body}
 ::: {.entry}
 ::: {.entry-head}
 [Ph.D., Systems Modeling and Analysis (statistics), M.S. en route]{.entry-title} [In progress]{.entry-date}
@@ -20,27 +26,60 @@ Virginia Commonwealth University, Richmond, VA.
 :::
 Virginia Commonwealth University, Richmond, VA. Graduate coursework in applied linear regression and applied Bayesian statistics.
 :::
+:::
+:::
 
+::: {.row}
+::: {.head}
 ## Teaching
+:::
 
+::: {.body}
 See [Teaching](teaching.qmd).
+:::
+:::
 
+::: {.row}
+::: {.head}
 ## Selected projects
+:::
 
+::: {.body}
 See [Projects](projects.qmd).
+:::
+:::
 
+::: {.row}
+::: {.head}
 ## Presentations
+:::
 
+::: {.body}
 - *Nonparametric Analysis of Spotify Audio Features.* Course presentation, STAT 423: Nonparametric Statistics, VCU, Fall 2025.
 - With G. Chandler and D. Selb. *Analyzing the Impact of the Implementation of MELD 3.0.* Group presentation, SSOR 480: Consulting Using Advanced Analytics, VCU, Fall 2025.
 - With D. Wall and R. Saakian. *Analysis of Diminishing Returns on Ad Spending.* Group presentation, SSOR 480, VCU, Fall 2025.
+:::
+:::
 
+::: {.row}
+::: {.head}
 ## Skills
+:::
 
+::: {.body}
 **Languages:** R, Python, SAS, SQL, C++.
 **Methods:** regression and diagnostics, Bayesian and hierarchical models, time series, nonparametric inference, experimental design, predictive modeling and evaluation.
 **Tools:** Quarto, JAGS, PyMC, scikit-learn, Git.
+:::
+:::
 
+::: {.row}
+::: {.head}
 ## Memberships
+:::
 
+::: {.body}
 Society for Industrial and Applied Mathematics (SIAM), 2026 to present.
+:::
+:::
+
