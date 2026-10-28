@@ -15,16 +15,16 @@ description: "Curriculum vitae of Tristan Kennedy."
 ::: {.body}
 ::: {.entry}
 ::: {.entry-head}
-[Ph.D., Systems Modeling and Analysis (statistics), M.S. en route]{.entry-title} [In progress]{.entry-date}
+[B.S., Mathematical Sciences, Concentration in Statistics]{.entry-title} [May 2026]{.entry-date}
 :::
-Virginia Commonwealth University, Richmond, VA.
+Virginia Commonwealth University, Richmond, VA. Graduate coursework in applied linear regression and applied Bayesian statistics.
 :::
 
 ::: {.entry}
 ::: {.entry-head}
-[B.S., Mathematics, Statistics concentration]{.entry-title} [May 2026]{.entry-date}
+[Ph.D. in progress, Systems Modeling and Analysis (Statistics and Data Science)]{.entry-title} [Aug 2026 to present]{.entry-date}
 :::
-Virginia Commonwealth University, Richmond, VA. Graduate coursework in applied linear regression and applied Bayesian statistics.
+Virginia Commonwealth University, Richmond, VA. Available for full-time work.
 :::
 :::
 :::

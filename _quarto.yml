@@ -12,7 +12,7 @@ project:
 website:
   title: "Tristan Kennedy"
   site-url: https://tristkenn.com
-  description: "Statistics PhD student at Virginia Commonwealth University."
+  description: "Statistics graduate (B.S., VCU 2026). Statistical analysis, data quality control, and reporting in R and Python. Available for full-time work."
   repo-url: https://github.com/tristantoo/tristantoo.github.io
 
 # minimal: no Bootstrap. Nav and footer come from _includes; styles/site.css imports the Hallmark tokens and base.

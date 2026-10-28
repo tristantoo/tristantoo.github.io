@@ -8,7 +8,7 @@ description: "Statistical modeling for insurance pricing, healthcare claims, and
   <div class="container hero-grid">
     <div class="hero-text">
       <h1>Tristan Kennedy</h1>
-      <p class="lead">PhD student in Systems Modeling and Analysis (Statistics and Data Science) at Virginia Commonwealth University.</p>
+      <p class="lead">Statistics graduate (B.S., VCU 2026) available for full-time work in statistical analysis, data quality control, and reporting.</p>
       <p class="actions"><a class="btn btn--primary" href="mailto:tristan@tristkenn.com">Email</a><a class="btn" href="projects.html">Projects</a><a class="btn" href="cv.html">CV</a></p>
     </div>
     <figure class="sheet">
@@ -44,7 +44,7 @@ description: "Statistical modeling for insurance pricing, healthcare claims, and
 ::: {.body}
 I build statistical models that have to hold up when someone acts on them: insurance pricing, healthcare claims, and forecasting. My work tests models on later data than they were trained on, checks that predicted probabilities match what happens, and reports when a model fails a check.
 
-I am the first in my family to go to college. I finished a B.S. in Mathematical Sciences with a statistics concentration at VCU in May 2026 and started graduate study in Systems Modeling and Analysis that August.
+I am the first in my family to go to college. I finished a B.S. in Mathematical Sciences with a statistics concentration at VCU in May 2026 and started graduate study in Systems Modeling and Analysis that August. I am available for full-time analyst and statistician roles.
 
 As a graduate teaching assistant I plan and teach full class sessions of Contemporary Mathematics for 85 students, write and grade their assessments, and keep the gradebook. Before that I spent nearly six years as a shift lead at Best Buy, leading about 30 people on a shift. Both jobs taught me the same thing: an answer only counts if the person in front of you can use it.
 
