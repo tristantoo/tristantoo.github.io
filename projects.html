@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fde2880e8494702fb6e43d07368e138c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0c675483cfeafc73e83ffb841cf18837.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-fde2880e8494702fb6e43d07368e138c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c497049ec25924478ba264384726fb87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5709362489400b4273abbc691c7a8dcc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c497049ec25924478ba264384726fb87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -342,6 +342,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Each project states how it was evaluated and what its results do not show.</p>
+<section id="pfas-in-michigan-public-water-supplies-20202025" class="level3 project-card">
+<h3 class="anchored" data-anchor-id="pfas-in-michigan-public-water-supplies-20202025">PFAS in Michigan Public Water Supplies, 2020–2025</h3>
+<p>Censored-data statistics on every PFAS result Michigan EGLE has published for public water supplies: 156,174 results at 5,434 sampling points in 2,795 systems. 95.5% of results are below the 2 ng/L reporting limit, so no statewide mean is reported.</p>
+<ul>
+<li><strong>Compliance screening:</strong> running annual averages put 76 sampling points in 52 systems over the federal 4 ppt PFOA/PFOS limit in at least one full year, against 22 points in 15 systems for Michigan’s limits. How nondetects are counted changes at most 2 points.</li>
+<li><strong>Trends:</strong> Akritas–Theil–Sen tests with FDR control found 43 increasing and 32 decreasing series (sign test p = 0.25), so no statewide decline is claimed. Rising points stay on quarterly sampling and are more likely to be tested, which biases that count toward increases.</li>
+<li><strong>Detection monitoring:</strong> intrawell prediction limits with verification resampling, and the double quantification rule, flag 63 statistically significant increases at 39 points.</li>
+<li><strong>Pre-registration:</strong> the plan was committed before any statistic was computed, and both falsification checks fired. In a simulation, RL/2 substitution matched or beat ROS, and Kaplan–Meier was never the best estimator.</li>
+</ul>
+<p>These are screening estimates, not compliance determinations.</p>
+<p><span class="tag">R</span> <span class="tag">Environmental statistics</span> <span class="tag">Censored data</span> <span class="tag">Trend analysis</span> <span class="tag">Detection monitoring</span></p>
+<div class="links">
+<p><a href="pfas-michigan/">Report</a> · <a href="https://github.com/tristantoo/mi-pfas-monitoring">Code and data</a></p>
+</div>
+</section>
 <section id="hospital-price-file-audit-2026-paid-amount-rule" class="level3 project-card">
 <h3 class="anchored" data-anchor-id="hospital-price-file-audit-2026-paid-amount-rule">Hospital Price File Audit (2026 paid-amount rule)</h3>
 <p>Since April 2026, CMS has asked hospitals to publish the median, 10th and 90th percentile of what insurers actually paid. I drew a stratified random sample of 300 US hospitals before looking up any websites, so hospitals with missing or blocked files stay in the denominator, and audited every non-federal Virginia hospital. A pipeline fetches each hospital’s index and price file (CSV, JSON or zip, up to 300 MB each) and parses about 53 million payer rows. 61.7% of hospitals (95% CI 56.3% to 66.8%) met every file requirement I could check. Only 19.8% (15.3% to 25.1%) of readable files report paid amounts on more than a tenth of their rows, and most of the rest enter a claim count of 0, which the rule allows when there are no claims. Shares are design-weighted with Wilson intervals on the effective sample size. A second fresh fetch 8 hours later reproduced all 2,703 national check results, and a failure is shown only if it repeats. Peterson-KFF reported the empty fields first; this audit adds a hospital-level probability sample with non-response kept in the denominator.</p>
