@@ -12,9 +12,9 @@ description: "Statistical modeling for insurance pricing, healthcare claims, and
       <p class="actions"><a class="btn btn--primary" href="mailto:tristan@tristkenn.com">Email</a><a class="btn" href="projects.html">Projects</a><a class="btn" href="cv.html">CV</a></p>
     </div>
     <figure class="sheet">
-      <div class="sheet-scroll" tabindex="0" role="region" aria-label="Held-out results, scrolls sideways on small screens">
+      <div class="sheet-scroll" tabindex="0" role="region" aria-label="Results, scrolls sideways on small screens">
         <table>
-          <caption>Held-out results, by project</caption>
+          <caption>Results, by project</caption>
           <thead>
             <tr><th scope="col">Project and comparison</th><th scope="col" class="num">Result</th><th scope="col" class="num">Uncertainty</th><th scope="col">Read</th></tr>
           </thead>
