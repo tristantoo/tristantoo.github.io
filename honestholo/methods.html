@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trading-card price research with costs, losses, and uncertainty.">
+<title>Methods and limits</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page-methods">
+<main class="content"><header id="title-block-header" class="quarto-title-block"></header>
+<header class="site-header" role="banner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="wordmark" href="index.html" aria-label="Honest Holo home">Honest Holo</a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+  </nav>
+  <details class="mobile-nav">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+    </nav>
+  </details>
+</header>
+<h1 id="main">Methods and limits</h1>
+<div class="prose">
+<h2 id="sources-and-coverage">Sources and coverage</h2>
+<p><strong>TCGplayer prices via <a href="https://tcgcsv.com/?src=honestholo_methods">tcgcsv</a></strong> (accessed 2026-11-04): our weekly panel runs 2024-02-08 through 2026-10-29, with separate product and printing identifiers. MTG, Pokémon and Riftbound have different coverage; Riftbound has a shorter history. Market, low, mid, high and Direct Low are price fields, not executed orders in our account. We do not treat market prices or low listings as a promise that a sale will fill.</p>
+<p><strong><a href="https://www.pricecharting.com/?src=honestholo_methods">PriceCharting</a></strong> (accessed 2026-11-04): monthly sold-price history for modern English Pokémon sealed. Our importer uses its sealed-price series. We publish our own aggregates with source credit and a link, not product-level monthly prices or raw downloads. Rights for a paid product remain <strong>UNVERIFIED</strong>; see <a href="https://www.pricecharting.com/page/terms-of-service?src=honestholo_methods">PriceCharting’s terms</a> (accessed 2026-11-04). This is not a claim of permission to resell its data.</p>
+<p>The sealed report covers 164 standard-MSRP products across 30 sets: 67 ETBs, 50 packs, 27 booster bundles, and 20 booster boxes. Each horizon uses the products with available outcomes, so denominators change. We did not recompute these analyses for this site; figures are copied from Honest Holo’s reports reviewed 2026-11-04.</p>
+<h2 id="cost-model">Cost model</h2>
+<p>These are <strong>backtest assumptions</strong>, not a current fee quote or a tax calculation for every buyer. The model uses 6% purchase tax. Let sale price be <code>P</code>:</p>
+<pre class="text"><code>commission     = min(rate * P, $75)
+processing     = 2.5% * (P * 1.06) + $0.30
+seller net     = P - commission - processing - outbound shipping
+market cost    = entry price * 1.06 + inbound shipping
+MSRP cost      = MSRP * 1.06                  (assumed in-store purchase)
+net return     = seller net / entry cost - 1</code></pre>
+<p>For the weekly card backtest, <code>entry price = max(market, low listing)</code>. Commission is 10.25% before 2026-02-10 and 10.75% afterward. The sealed MSRP analysis instead uses a <strong>fixed 10.75%</strong> rate for every exit, including historical exits. Both use the $75 cap and processing formula above.</p>
+<p>Shipping is assumed per item, on both entry and exit unless MSRP entry:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Modeled shipping costs">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Product</th>
+<th style="text-align: left;">Price threshold</th>
+<th style="text-align: right;">Modeled shipping</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;" data-label="Product"><span class="cell-value">Single</span></td>
+<td style="text-align: left;" data-label="Price threshold"><span class="cell-value">Below $50</span></td>
+<td style="text-align: right;" data-label="Modeled shipping"><span class="cell-value">$1</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Product"><span class="cell-value">Single</span></td>
+<td style="text-align: left;" data-label="Price threshold"><span class="cell-value">$50 or more</span></td>
+<td style="text-align: right;" data-label="Modeled shipping"><span class="cell-value">$5</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;" data-label="Product"><span class="cell-value">Sealed</span></td>
+<td style="text-align: left;" data-label="Price threshold"><span class="cell-value">Below $150</span></td>
+<td style="text-align: right;" data-label="Modeled shipping"><span class="cell-value">$8</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Product"><span class="cell-value">Sealed</span></td>
+<td style="text-align: left;" data-label="Price threshold"><span class="cell-value">$150 or more</span></td>
+<td style="text-align: right;" data-label="Modeled shipping"><span class="cell-value">$20</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>No allowance for storage, insurance, returns, damage, sourcing time, or inability to sell. These omissions can make results too optimistic.</p>
+<h2 id="sealed-msrp-study">Sealed MSRP study</h2>
+<p>Source of record: <code>tcg-backtest/reports/pokemon_msrp.md</code> and <code>src/msrp.py</code>. Entry assumes MSRP plus tax at release, with no inbound shipping. Market entry uses month-one market price plus tax and shipping. Exit is measured at release plus 2, 6, 12, 24 or 36 months, not entry month plus the holding horizon. Thus a “12-month” market-entry result exits twelve months after release.</p>
+<p>The inherited price lookup can use the last available price in the preceding two months for an exit; the month-one entry lookup looks back one month. A missing exit is excluded, so these are available-outcome aggregates, not a complete portfolio. Product release timing uses known set release months where available and earliest observed sealed-sale month otherwise.</p>
+<p>The MSRP reference assumptions are $4.49 per pack, $26.94 per bundle, $49.99 per standard ETB, $59.99 per Pokémon Center ETB, and $143.64 per booster box. These are the report’s reference assumptions, <strong>UNVERIFIED as per-product historical MSRPs</strong>. The box sensitivity uses $161.64. Products with special MSRPs are excluded. Availability at MSRP is not modeled, so this is an optimistic entry scenario.</p>
+<p>Overall net returns first average products within each set, then average sets. The 95% intervals resample sets 5,000 times; the five holding-horizon p-values receive Holm correction. The product-type table instead averages products. It has no subgroup uncertainty estimates. Do not attach the overall CI to ETBs. These retrospective descriptive cohorts are not a forward-deployment test.</p>
+<p>The <strong>24-36-month gains include one boom (2025-26)</strong>. Different ages also exit in different calendar markets. Set age and calendar regime are not cleanly separated.</p>
+<h2 id="what-failed">What failed</h2>
+<p>The model/rule study uses forward-chaining training, never random train/test splits. Features read only data available at the decision date; training labels must have matured. Models refit every eight weeks, and calibration uses matured out-of-sample predictions. The holdout starts 2026-03-05.</p>
+<p>The primary rule selects up to 25 items with calibrated profit probability at least 0.5 and holds cash if nothing qualifies. Primary scoring assigns -100% to a pick with no future price in the horizon. A fallback price mark is not proof of sale. Each game is tested at four and thirteen weeks.</p>
+<p>The tested claim was positive mean weekly net return. Inference uses time-block bootstrap and Newey-West uncertainty, reporting the larger p-value, then Holm across the six game-by-horizon tests. <strong>None passed at 5%.</strong> Source: <code>tcg-backtest/reports/summary.md</code>. That fails our requirement for claiming a profitable buy rule. It does not prove every possible strategy loses.</p>
+<p>High rank correlation mostly reflected lagging market prices catching up with listings. It did not establish a tradeable edge. Selected-pick calibration was poor despite favorable aggregate classification metrics. We publish neither the models as buy signals nor the ETB subgroup mean as a forecast.</p>
+<h2 id="what-would-change-the-conclusion">What would change the conclusion?</h2>
+<p>A dated, pre-registered forward paper portfolio would need positive net returns with uncertainty that excludes zero, after costs, missing outcomes, and a fixed multiple-testing policy. We would compare strategies using paired differences, not differences between independently eyeballed intervals. An interval spanning zero remains inconclusive. No such forward result exists here yet.</p>
+<h2 id="sell-check-demand-protocol">Sell Check demand protocol</h2>
+<p>The frozen R8/DECISIONS design tests signup probability 1% versus 3%, capped at 600 unique waitlist visitors. Build boundary: <code>s &gt;= 2.48 + 0.0182*n</code>; stop boundary: <code>s &lt;= -1.39 + 0.0182*n</code>, where <code>s</code> is signups and <code>n</code> is visitors. Counts are evaluated sequentially, not by repeatedly running fixed-sample p-tests. At the cap without a boundary crossing, report inconclusive.</p>
+<p>A demand signal also needs signups from at least three distinct <code>src</code> tags. Fewer than 100 visitors by week six means <strong>no distribution</strong>, not no demand. Changing copy resets the cohort. The later paid validation requires at least 50 signups and 10 card-authorized pre-orders within two weeks, after the data-license review clears, including written permission from TCGplayer and PriceCharting and a lawyer’s review. The waitlist is a funnel meter, not authorization to build or charge for a product. No money is collected on this site. B5 owns analysis and counting; the local beacon is unconfigured, so this build reports no visitor denominator.</p>
+</div>
+<footer class="journal-footer" role="contentinfo">
+<p><a href="./index.html" class="wordmark">Honest Holo</a></p>
+<p><a href="./index.html">Findings</a> / <a href="./scoreboard.html">Scoreboard</a> / <a href="./methods.html">Methods</a> / <a href="./sell-check.html">Sell Check</a></p>
+<p>Not financial advice. Prices are historical.</p>
+<details class="rights-notices"><summary>Source and rights notices</summary>
+<p>Unofficial. Not affiliated with or endorsed by The Pokémon Company, Nintendo, Wizards of the Coast, Riot Games, TCGplayer, or PriceCharting.</p>
+<p>This product uses TCGplayer data but is not endorsed or certified by TCGplayer.</p>
+<p>This site is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy?src=site_footer">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+<p>This site was created under Riot Games’ <a href="https://www.riotgames.com/en/legal?src=site_footer">Legal Jibber Jabber</a> policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+<p>Not affiliated with or endorsed by The Pokémon Company or Nintendo. ©Pokémon/Nintendo/Creatures/GAME FREAK.</p>
+</details>
+</footer>
+
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/site.js" defer=""></script>
+
+
+</body></html>

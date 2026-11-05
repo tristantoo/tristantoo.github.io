@@ -8,6 +8,7 @@ project:
     - styles/base.css
     - hospital-prices/**
     - pfas-michigan/**
+    - honestholo/**
 
 website:
   title: "Tristan Kennedy"

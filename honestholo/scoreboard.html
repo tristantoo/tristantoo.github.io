@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trading-card price research with costs, losses, and uncertainty.">
+<title>The scoreboard</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page-scoreboard">
+<main class="content"><header id="title-block-header" class="quarto-title-block"></header>
+<header class="site-header" role="banner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="wordmark" href="index.html" aria-label="Honest Holo home">Honest Holo</a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+  </nav>
+  <details class="mobile-nav">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+    </nav>
+  </details>
+</header>
+<h1 id="main">The scoreboard</h1>
+<div class="lead">
+<p>Historical paper results, with the losses left in.</p>
+</div>
+<p>As of <strong>2026-11-04</strong>. No actual purchases or sales. No forward paper positions have been registered. These backtested cohorts are not a live account.</p>
+<div class="notice paper-trade">
+<p><strong>Hypothetical paper trade, no money invested.</strong> Historical results use fixed entry/exit rules and include modeled tax, fees and shipping (<a href="./methods.html#cost-model">rules and costs</a>). MSRP entry is assumed and often isn’t achievable. No forward positions are registered; forward rules and the valuation schedule must be fixed before the first position.</p>
+</div>
+<h2 id="the-msrp-etb-paper-trade">The MSRP-ETB paper trade</h2>
+<p>Hypothesis to track: obtain an Elite Trainer Box at MSRP, pay tax, then measure what a later sale would leave after fees and shipping. MSRP availability is <strong>not assured</strong>. The historical report assumes in-store entry with no inbound shipping; it does not model stock rationing, storage, damage, or time spent sourcing.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Historical ETB and pack results">
+<table class="caption-top">
+<caption>Historical MSRP-entry returns, means over products; not
+cumulative account returns. Source: <a href="https://www.pricecharting.com/?src=site_scoreboard">PriceCharting</a>,
+derived statistics, accessed 2026-11-04.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hold after release</th>
+<th style="text-align: right;">ETB mean net</th>
+<th style="text-align: right;">Loose-pack mean net</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold after release"><span class="cell-value">2 months</span></td>
+<td style="text-align: right;" data-label="ETB mean net"><span class="cell-value">+17%</span></td>
+<td style="text-align: right;" data-label="Loose-pack mean net"><span class="cell-value">+203%</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Hold after release"><span class="cell-value">6 months</span></td>
+<td style="text-align: right;" data-label="ETB mean net"><span class="cell-value">+22%</span></td>
+<td style="text-align: right;" data-label="Loose-pack mean net"><span class="cell-value"><span class="negative">-54%</span></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold after release"><span class="cell-value">12 months</span></td>
+<td style="text-align: right;" data-label="ETB mean net"><span class="cell-value">+46%</span></td>
+<td style="text-align: right;" data-label="Loose-pack mean net"><span class="cell-value"><span class="negative">-50%</span></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Hold after release"><span class="cell-value">24 months</span></td>
+<td style="text-align: right;" data-label="ETB mean net"><span class="cell-value">+117%</span></td>
+<td style="text-align: right;" data-label="Loose-pack mean net"><span class="cell-value"><span class="negative">-41%</span></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold after release"><span class="cell-value">36 months</span></td>
+<td style="text-align: right;" data-label="ETB mean net"><span class="cell-value">+261%</span></td>
+<td style="text-align: right;" data-label="Loose-pack mean net"><span class="cell-value"><span class="negative">-51%</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The two-month loose-pack result is <strong>+203%</strong>, an unstable early result that does not persist at the longer horizons. The table includes every reported horizon. The <strong>24-36-month gains reflect one boom (2025-26)</strong>. No ETB-only sample counts, confidence intervals, or adjusted p-values are supplied by this report. Its total universe contains <strong>67 ETBs</strong>, but not all have each holding horizon.</p>
+<h2 id="entry-price-changes-the-result">Entry price changes the result</h2>
+<p>The table below covers <strong>all standard sealed types</strong>, not ETBs alone. Each set gets equal weight; the report covers 164 products across 30 sets overall. Counts below are for MSRP outcomes; market-entry missingness may differ.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Historical sealed returns and uncertainty">
+<table class="caption-top">
+<caption>Honest Holo aggregate analysis of standard Pokémon sealed;
+confidence intervals bootstrap sets. Source: <a href="https://www.pricecharting.com/?src=site_scoreboard">PriceCharting</a>,
+accessed 2026-11-04.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hold</th>
+<th style="text-align: right;">Sets / products</th>
+<th style="text-align: right;">MSRP mean net</th>
+<th style="text-align: left;">MSRP 95% CI</th>
+<th style="text-align: right;">Holm p</th>
+<th style="text-align: right;">Month-one market mean net</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold"><span class="cell-value">2 months</span></td>
+<td style="text-align: right;" data-label="Sets / products"><span class="cell-value">29 / 137</span></td>
+<td style="text-align: right;" data-label="MSRP mean net"><span class="cell-value">+48%</span></td>
+<td style="text-align: left;" data-label="MSRP 95% CI"><span class="cell-value"><span class="negative">[-8%,</span>
++128%]</span></td>
+<td style="text-align: right;" data-label="Holm p"><span class="cell-value">0.2976</span></td>
+<td style="text-align: right;" data-label="Month-one market mean net"><span class="cell-value"><span class="negative">-46%</span></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Hold"><span class="cell-value">6 months</span></td>
+<td style="text-align: right;" data-label="Sets / products"><span class="cell-value">27 / 134</span></td>
+<td style="text-align: right;" data-label="MSRP mean net"><span class="cell-value"><span class="negative">-6%</span></span></td>
+<td style="text-align: left;" data-label="MSRP 95% CI"><span class="cell-value"><span class="negative">[-25%,</span>
++17%]</span></td>
+<td style="text-align: right;" data-label="Holm p"><span class="cell-value">0.6854</span></td>
+<td style="text-align: right;" data-label="Month-one market mean net"><span class="cell-value"><span class="negative">-47%</span></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold"><span class="cell-value">12 months</span></td>
+<td style="text-align: right;" data-label="Sets / products"><span class="cell-value">24 / 120</span></td>
+<td style="text-align: right;" data-label="MSRP mean net"><span class="cell-value">+8%</span></td>
+<td style="text-align: left;" data-label="MSRP 95% CI"><span class="cell-value"><span class="negative">[-16%,</span>
++35%]</span></td>
+<td style="text-align: right;" data-label="Holm p"><span class="cell-value">0.5244</span></td>
+<td style="text-align: right;" data-label="Month-one market mean net"><span class="cell-value"><span class="negative">-33%</span></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" data-label="Hold"><span class="cell-value">24 months</span></td>
+<td style="text-align: right;" data-label="Sets / products"><span class="cell-value">17 / 86</span></td>
+<td style="text-align: right;" data-label="MSRP mean net"><span class="cell-value">+57%</span></td>
+<td style="text-align: left;" data-label="MSRP 95% CI"><span class="cell-value">[+6%, +122%]</span></td>
+<td style="text-align: right;" data-label="Holm p"><span class="cell-value">0.1544</span></td>
+<td style="text-align: right;" data-label="Month-one market mean net"><span class="cell-value">+33%</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;" data-label="Hold"><span class="cell-value">36 months</span></td>
+<td style="text-align: right;" data-label="Sets / products"><span class="cell-value">11 / 58</span></td>
+<td style="text-align: right;" data-label="MSRP mean net"><span class="cell-value">+136%</span></td>
+<td style="text-align: left;" data-label="MSRP 95% CI"><span class="cell-value">[+39%, +272%]</span></td>
+<td style="text-align: right;" data-label="Holm p"><span class="cell-value">0.1180</span></td>
+<td style="text-align: right;" data-label="Month-one market mean net"><span class="cell-value">+132%</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="notice loss">
+<p><strong>Losses are part of the record.</strong> Market-entry means were negative at two, six, and twelve months. MSRP loose packs lost at six through thirty-six months. None of the five overall MSRP holding-horizon tests passed Holm correction at the 5% level. Positive subgroup means do not override that result.</p>
+</div>
+<p>Credit: derived by Honest Holo from <a href="https://www.pricecharting.com/?src=honestholo_scoreboard">PriceCharting</a> sold-price history (accessed 2026-11-04). Only our aggregates are shown. Source report: <code>tcg-backtest/reports/pokemon_msrp.md</code>, reviewed 2026-11-04. <a href="./methods.html">Cost model and protocol</a>.</p>
+<h2 id="forward-positions-empty">Forward positions: empty</h2>
+<p><strong>No positions registered. Performance: unavailable.</strong> A missing quote remains missing; it must never silently become a zero return. A mark is not an executed sale.</p>
+<p>Use this table for positions registered <strong>before</strong> observing outcomes. Keep closed positions and losses. Freeze the entry rule and valuation schedule before opening the portfolio; do not backfill winners from the historical table.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Live position template, currently empty">
+<table class="caption-top" style="width:100%;">
+<caption>Live-position template. Net liquidation = marked value less
+modeled exit costs. Return = net liquidation / total cost - 1.</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Position / product</th>
+<th style="text-align: left;">Registered at</th>
+<th style="text-align: left;">Entry date / qty</th>
+<th style="text-align: right;">MSRP / unit</th>
+<th style="text-align: right;">Tax / inbound</th>
+<th style="text-align: right;">Total cost</th>
+<th style="text-align: left;">Latest mark / date</th>
+<th style="text-align: left;">Exit fees / shipping</th>
+<th style="text-align: left;">Net liquidation / return</th>
+<th style="text-align: left;">Closed date / realized net</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;" data-label="Position / product"><span class="cell-value">No positions</span></td>
+<td style="text-align: left;" data-label="Registered at"><span class="cell-value">Pending</span></td>
+<td style="text-align: left;" data-label="Entry date / qty"><span class="cell-value">Pending</span></td>
+<td style="text-align: right;" data-label="MSRP / unit"><span class="cell-value">n/a</span></td>
+<td style="text-align: right;" data-label="Tax / inbound"><span class="cell-value">n/a</span></td>
+<td style="text-align: right;" data-label="Total cost"><span class="cell-value">n/a</span></td>
+<td style="text-align: left;" data-label="Latest mark / date"><span class="cell-value">No quote</span></td>
+<td style="text-align: left;" data-label="Exit fees / shipping"><span class="cell-value">n/a</span></td>
+<td style="text-align: left;" data-label="Net liquidation / return"><span class="cell-value">Unavailable</span></td>
+<td style="text-align: left;" data-label="Closed date / realized net"><span class="cell-value">Open
+ledger not started</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="sell-check-waitlist">Sell Check waitlist</h2>
+<p>Bought it at MSRP? See what it would net after fees. Sell Check is a proposed <strong>$5/month</strong> Pokémon sealed tool, not a launched product. No card needed. This waitlist measures interest only; a paid launch requires written data-source permission and a lawyer’s review. <a href="./sell-check.html">Read the proposal</a>.</p>
+<section class="waitlist-panel" data-tally-placeholder="" aria-label="Sell Check waitlist">
+  <p data-tally-status="" role="status">Waitlist not connected in this local preview. No email is collected.</p>
+  <p>The planned form asks for email, game (Pokémon / MTG / Riftbound), and whether you pay for restock alerts.</p>
+  <input type="hidden" name="src" value="scoreboard">
+  <iframe title="Sell Check waitlist" loading="lazy" hidden="" data-src="https://tally.so/embed/REPLACE_ME?src=scoreboard" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <a data-tally-fallback="" hidden="">Open the waitlist</a>
+  <noscript><p>JavaScript is needed to load the future embedded waitlist. This local preview has no connected form.</p></noscript>
+</section>
+<h2 id="affiliate-links">Affiliate links</h2>
+<p><strong>No active affiliate links.</strong> No affiliate account or destination was supplied. Future approved links belong here, with <strong>Paid link</strong> next to each destination: we earn a commission if you buy through our paid links. Source-credit links above are not affiliate links. No Riftbound affiliate links are planned.</p>
+<footer class="journal-footer" role="contentinfo">
+<p><a href="./index.html" class="wordmark">Honest Holo</a></p>
+<p><a href="./index.html">Findings</a> / <a href="./scoreboard.html">Scoreboard</a> / <a href="./methods.html">Methods</a> / <a href="./sell-check.html">Sell Check</a></p>
+<p>Not financial advice. Prices are historical.</p>
+<details class="rights-notices"><summary>Source and rights notices</summary>
+<p>Unofficial. Not affiliated with or endorsed by The Pokémon Company, Nintendo, Wizards of the Coast, Riot Games, TCGplayer, or PriceCharting.</p>
+<p>This product uses TCGplayer data but is not endorsed or certified by TCGplayer.</p>
+<p>This site is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy?src=site_footer">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+<p>This site was created under Riot Games’ <a href="https://www.riotgames.com/en/legal?src=site_footer">Legal Jibber Jabber</a> policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+<p>Not affiliated with or endorsed by The Pokémon Company or Nintendo. ©Pokémon/Nintendo/Creatures/GAME FREAK.</p>
+</details>
+</footer>
+
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/site.js" defer=""></script>
+
+
+</body></html>

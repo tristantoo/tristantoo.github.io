@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trading-card price research with costs, losses, and uncertainty.">
+<title>Sell Check</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page-sell-check">
+<main class="content"><header id="title-block-header" class="quarto-title-block"></header>
+<header class="site-header" role="banner">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="wordmark" href="index.html" aria-label="Honest Holo home">Honest Holo</a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+  </nav>
+  <details class="mobile-nav">
+    <summary>Menu</summary>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Findings</a><a href="scoreboard.html">Scoreboard</a><a href="methods.html">Methods</a><a href="sell-check.html">Sell Check</a>
+    </nav>
+  </details>
+</header>
+<h1 id="main">Sell Check</h1>
+<div class="lead">
+<p>A proposed Pokémon sealed tool for estimating proceeds after selling costs.</p>
+</div>
+<p><strong>This doesn’t exist yet.</strong> We’re checking whether enough people want it before we build it.</p>
+<h2 id="what-it-would-do">What it would do</h2>
+<p>Pokémon sealed first:</p>
+<ul>
+<li>For every sealed product in print: MSRP, today’s TCGplayer market price, and what you’d actually net after TCGplayer fees and shipping if you sold today.</li>
+<li>An alert when something you own crosses a net price you set.</li>
+<li>What past sets did in the months after release, with how many sets that’s based on. History, not a forecast.</li>
+</ul>
+<h2 id="what-it-wont-do">What it won’t do</h2>
+<ul>
+<li>Tell you what to buy. Our buy-signal models failed out-of-sample testing, so we don’t sell them.</li>
+<li>Promise profit. In our data, sealed Pokémon bought at market price in a set’s first month was down <strong>33-47%</strong> on average at six to twelve months after release, net of selling costs. Those figures average sets, not dollars invested.</li>
+</ul>
+<div class="notice paper-trade">
+<p><strong>Hypothetical paper trade, no money invested.</strong> Historical results use fixed entry/exit rules and include modeled tax, fees and shipping (<a href="./methods.html#cost-model">rules and costs</a>). MSRP entry is assumed and often isn’t achievable. No forward positions are registered; forward rules and the valuation schedule must be fixed before the first position.</p>
+</div>
+<p>Credit: Honest Holo aggregate analysis of <a href="https://www.pricecharting.com/?src=honestholo_sell_check">PriceCharting</a> sold-price history (accessed 2026-11-04), from <code>pokemon_msrp.md</code>. <a href="./scoreboard.html">See the losses and methods</a>.</p>
+<p><strong>Price if it launches: about $5/month, cancel anytime.</strong> No card needed. We’ll email you once if it launches, and delete this list if it doesn’t. No payment is taken here. This waitlist measures interest only. A paid launch requires written permission from TCGplayer and PriceCharting and a lawyer’s review.</p>
+<section class="waitlist-panel" data-tally-placeholder="" aria-label="Sell Check waitlist">
+  <p data-tally-status="" role="status">Waitlist not connected in this local preview. No email is collected.</p>
+  <p>The planned form asks for email, game (Pokémon / MTG / Riftbound), and whether you pay for restock alerts.</p>
+  <input type="hidden" name="src" value="scoreboard">
+  <iframe title="Sell Check waitlist" loading="lazy" hidden="" data-src="https://tally.so/embed/REPLACE_ME?src=scoreboard" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <a data-tally-fallback="" hidden="">Open the waitlist</a>
+  <noscript><p>JavaScript is needed to load the future embedded waitlist. This local preview has no connected form.</p></noscript>
+</section>
+<div class="source">
+<p>Form implementation reference: <a href="https://tally.so/help/hidden-fields?src=honestholo_sell_check">Tally hidden fields</a> and <a href="https://tally.so/help/embed-your-form?src=honestholo_sell_check">embedded forms</a> (accessed 2026-11-04). A hidden field named <code>src</code> receives the incoming campaign tag; absent or invalid tags use <code>scoreboard</code>. This preview collects no submissions.</p>
+</div>
+<footer class="journal-footer" role="contentinfo">
+<p><a href="./index.html" class="wordmark">Honest Holo</a></p>
+<p><a href="./index.html">Findings</a> / <a href="./scoreboard.html">Scoreboard</a> / <a href="./methods.html">Methods</a> / <a href="./sell-check.html">Sell Check</a></p>
+<p>Not financial advice. Prices are historical.</p>
+<details class="rights-notices"><summary>Source and rights notices</summary>
+<p>Unofficial. Not affiliated with or endorsed by The Pokémon Company, Nintendo, Wizards of the Coast, Riot Games, TCGplayer, or PriceCharting.</p>
+<p>This product uses TCGplayer data but is not endorsed or certified by TCGplayer.</p>
+<p>This site is unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy?src=site_footer">Fan Content Policy</a>. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+<p>This site was created under Riot Games’ <a href="https://www.riotgames.com/en/legal?src=site_footer">Legal Jibber Jabber</a> policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+<p>Not affiliated with or endorsed by The Pokémon Company or Nintendo. ©Pokémon/Nintendo/Creatures/GAME FREAK.</p>
+</details>
+</footer>
+
+</main>
+<script src="assets/config.js"></script>
+<script src="assets/site.js" defer=""></script>
+
+
+</body></html>
